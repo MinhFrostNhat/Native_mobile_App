@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="POST INFORMATION RENTAL"
+            android:textColor="#4CAF50"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/editTextPrice"
+            android:text="Rental Price($/month):"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPrice"
+            app:layout_constraintStart_toStartOf="@+id/editTextPrice" />
+
+        <EditText
+            android:id="@+id/editTextAddress"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/editTextAddress"
+            android:text="Address:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextAddress"
+            app:layout_constraintStart_toStartOf="@+id/editTextAddress" />
+
+        <Spinner
+            android:id="@+id/spinnerPropety"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
+
+        <TextView
+            android:id="@+id/tvProperty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/spinnerPropety"
+            android:text="Property Type:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerPropety"
+            app:layout_constraintStart_toStartOf="@+id/spinnerPropety" />
+
+        <EditText
+            android:id="@+id/editTextBed"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="75dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPropety" />
+
+        <EditText
+            android:id="@+id/editTextBath"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/editTextBed"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/editTextBed"
+            app:layout_constraintTop_toTopOf="@+id/editTextBed"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/tvBedroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/editTextBed"
+            android:text="Bedroom:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextBed"
+            app:layout_constraintStart_toStartOf="@+id/editTextBed" />
+
+        <TextView
+            android:id="@+id/tvBathroom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/editTextBath"
+            android:text="Bathroom:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextBath"
+            app:layout_constraintStart_toStartOf="@+id/editTextBath" />
+
+        <Spinner
+            android:id="@+id/spinnerFumiture"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="85dp"
+            android:layout_marginEnd="50dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextBed" />
+
+        <TextView
+            android:id="@+id/tvFumiture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/spinnerFumiture"
+            android:text="Furniture Types:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerFumiture"
+            app:layout_constraintStart_toStartOf="@+id/spinnerFumiture" />
+
+        <EditText
+            android:id="@+id/editTextNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerFumiture" />
+
+        <TextView
+            android:id="@+id/tnNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/editTextNote"
+            android:text="Notes:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextNote"
+            app:layout_constraintStart_toStartOf="@+id/editTextNote" />
+
+        <TextView
+            android:id="@+id/tvPoster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:labelFor="@id/editTextPoster"
+            android:text="Name of Poster:"
+            android:textColor="#000333"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/editTextPoster"
+            app:layout_constraintStart_toStartOf="@+id/editTextPoster" />
+
+        <EditText
+            android:id="@+id/editTextPoster"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:minHeight="48dp"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNote" />
+
+        <Button
+            android:id="@+id/btnPost"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="75dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="50dp"
+            android:text="Create Post"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPoster" />
+
+        <EditText
+            android:id="@+id/editTextPrice"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="50dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <TextView
+            android:id="@+id/addressError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/editTextAddress"
+            app:layout_constraintStart_toStartOf="@+id/editTextAddress"
+            app:layout_constraintTop_toBottomOf="@+id/editTextAddress" />
+
+        <TextView
+            android:id="@+id/propError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerPropety"
+            app:layout_constraintStart_toStartOf="@+id/spinnerPropety"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerPropety" />
+
+        <TextView
+            android:id="@+id/numError"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/editTextBath"
+            app:layout_constraintStart_toStartOf="@+id/editTextBed"
+            app:layout_constraintTop_toBottomOf="@+id/editTextBed" />
+
+        <TextView
+            android:id="@+id/furError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/spinnerFumiture"
+            app:layout_constraintStart_toStartOf="@+id/spinnerFumiture"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerFumiture" />
+
+        <TextView
+            android:id="@+id/posterError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPoster"
+            app:layout_constraintStart_toStartOf="@+id/editTextPoster"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPoster" />
+
+        <TextView
+            android:id="@+id/noteError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/editTextNote"
+            app:layout_constraintStart_toStartOf="@+id/editTextNote"
+            app:layout_constraintTop_toBottomOf="@+id/editTextNote" />
+
+        <TextView
+            android:id="@+id/priceError"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColor="#FF0000"
+            app:layout_constraintEnd_toEndOf="@+id/editTextPrice"
+            app:layout_constraintStart_toStartOf="@+id/editTextPrice"
+            app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>>
+
+</ScrollView>
